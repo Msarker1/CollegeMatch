@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setDefaultTextEncodingName("utf-8");
         webView.setWebChromeClient(new WebChromeClient());
 
-        webView.loadUrl("file:///android_asset/WWW/shit.html");
+        webView.loadUrl("file:///android_asset/WWW/CollegeMatch.html");
         webView.addJavascriptInterface(new MyJSInterface(this), "js");
 
 
