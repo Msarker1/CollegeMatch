@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Match</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="CollegeMatch.js"></script>
+    <link rel="stylesheet" href="CollegeMatch.css">
+</head>
+<div class="jumbotron">
+    <div class="panel panel-primary">
+        <div class="panel-body">
+
+            <h3>SCHOOL NAME:</h3>
+            <input class="form-control input-lg" id='college_name' type="text"
+                   placeholder="College/University Name"/>
+
+            <h3>SAT MATH:</h3>
+            <input class="form-control input-lg" id='user_sat_math' placeholder="SAT MATH"/>
+
+            <h3>SAT CRITICAL READING:</h3>
+            <input class="form-control input-lg" id='user_sat_reading' placeholder="SAT READING"/>
+
+            <h3>SAT WRITING:</h3>
+            <input class="form-control input-lg" id='user_sat_writing'
+                   placeholder="SAT WRITING"/><br>
+            <hr>
+            <div class="col-md-4 text-center">
+                <button id="click" class="btn btn-primary btn-lg btn-block"
+                        onclick="validInfo()"> MATCH ME!
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close"
+                            data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">COLLEGE MATCH STATUS:ERROR</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Please Enter Info In All Fields.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="modal fade" id="myprogress" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close"
+                            data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Searching For Data</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Please Wait....</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close"
+                            data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">COLLEGE MATCH STATUS:ERROR</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Please Enter Numbers for the SAT score Fields.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="modal fade" id="myModal3" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close"
+                            data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">COLLEGE MATCH STATUS:ERROR</h4>
+                </div>
+                <div class="modal-body">
+                    <p>SAT scores Cannot be more Than 800 Or Less Than 200</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="modal fade" id="myModal4" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close"
+                            data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">COLLEGE MATCH STATUS:ERROR</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Cannot find School Based On given INPUT! Please clearly type out
+                        the School Name</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="modal fade" id="myModal5" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close"
+                            data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">COLLEGE MATCH STATUS:ERROR</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Please Do not include any SPACES when entering SAT SCORES</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</html>
